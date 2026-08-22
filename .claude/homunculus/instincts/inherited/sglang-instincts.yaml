@@ -1,0 +1,452 @@
+# Instincts generated from https://github.com/cubxxw/sglang
+# Generated: 2026-04-24T10:19:08.341Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: sglang-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Commit Length
+
+## Action
+
+Write moderate-length commit messages (~57 characters)
+
+## Evidence
+
+- Average commit message length: 57 chars
+- Based on 11 commits
+
+---
+id: sglang-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: sglang-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: sglang-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: sglang-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: sglang-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: sglang-workflow-update-cookbook-documentation-and-snippets
+trigger: "when doing update cookbook documentation and snippets"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Workflow Update Cookbook Documentation And Snippets
+
+## Action
+
+Follow the update-cookbook-documentation-and-snippets workflow:
+1. Edit or add .mdx file under docs_new/cookbook/autoregressive/<Model>/
+2. Update or add code snippet in docs_new/src/snippets/autoregressive/<model>-deployment.jsx
+3. Optionally update docs_new/docs.json to register the new documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs_new/cookbook/autoregressive/*/*.mdx, docs_new/src/snippets/autoregressive/*.jsx, docs_new/docs.json
+
+---
+id: sglang-workflow-add-or-update-diffusion-model-pipeline
+trigger: "when doing add or update diffusion model pipeline"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Workflow Add Or Update Diffusion Model Pipeline
+
+## Action
+
+Follow the add-or-update-diffusion-model-pipeline workflow:
+1. Add or update config files in python/sglang/multimodal_gen/configs/
+2. Modify or add runtime pipeline files in python/sglang/multimodal_gen/runtime/pipelines/ and pipelines_core/stages/
+3. Update registry and server_args if needed
+4. Update or add related test cases and performance baselines
+5. Update documentation for compatibility matrix
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: python/sglang/multimodal_gen/configs/**/*, python/sglang/multimodal_gen/runtime/pipelines/*.py, python/sglang/multimodal_gen/runtime/pipelines_core/stages/*.py
+
+---
+id: sglang-workflow-incremental-cookbook-docs-snippet-update
+trigger: "when doing incremental cookbook docs snippet update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/sglang
+---
+
+# Sglang Workflow Incremental Cookbook Docs Snippet Update
+
+## Action
+
+Follow the incremental-cookbook-docs-snippet-update workflow:
+1. Edit .mdx file under docs_new/cookbook/autoregressive/<Model>/
+2. Edit code snippet in docs_new/src/snippets/autoregressive/<model>-deployment.jsx
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs_new/cookbook/autoregressive/*/*.mdx, docs_new/src/snippets/autoregressive/*.jsx
+
+---
+id: sglang-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Consistent with Python ecosystem best practices
+
+---
+id: sglang-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: sglang-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: sglang-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: sglang-instinct-import-style
+trigger: "When importing modules in Python files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: sglang-instinct-export-style
+trigger: "When exporting functions or classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: sglang-instinct-test-file-pattern
+trigger: "When writing a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Test File Pattern
+
+## Action
+
+Name the file with the pattern *.test.ts
+
+## Evidence
+
+- Pattern in testing.filePattern
+
+---
+id: sglang-instinct-test-type-unit
+trigger: "When adding tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Test Type Unit
+
+## Action
+
+Write unit tests
+
+## Evidence
+
+- Pattern in testing.testTypes
+
+---
+id: sglang-instinct-commit-prefix
+trigger: "When composing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Commit Prefix
+
+## Action
+
+Prefix the commit with a tag in square brackets if relevant (e.g., [diffusion], [AMD], [codex], [CI])
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commits: '[diffusion] model: support LTX2.3 high quality pipeline (#23366)'
+
+---
+id: sglang-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Commit Format
+
+## Action
+
+Use concise, descriptive messages with a summary of the change and reference to issue/PR if applicable
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples: 'Add DeepSeek V4 cookbook (#23605)'
+
+---
+id: sglang-instinct-update-cookbook-docs
+trigger: "When someone wants to add or revise cookbook documentation for a model, including deployment snippets"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Update Cookbook Docs
+
+## Action
+
+Edit or add .mdx file under docs_new/cookbook/autoregressive/<Model>/, update or add code snippet in docs_new/src/snippets/autoregressive/<model>-deployment.jsx, and optionally update docs_new/docs.json
+
+## Evidence
+
+- Workflow: update-cookbook-documentation-and-snippets
+- Files: docs_new/cookbook/autoregressive/*/*.mdx, docs_new/src/snippets/autoregressive/*.jsx, docs_new/docs.json
+
+---
+id: sglang-instinct-update-diffusion-pipeline
+trigger: "When someone wants to add support for a new diffusion model or update an existing pipeline"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Update Diffusion Pipeline
+
+## Action
+
+Add or update config files in python/sglang/multimodal_gen/configs/, modify or add runtime pipeline files in python/sglang/multimodal_gen/runtime/pipelines/ and pipelines_core/stages/, update registry and server_args if needed, update or add related test cases and performance baselines, and update documentation for compatibility matrix
+
+## Evidence
+
+- Workflow: add-or-update-diffusion-model-pipeline
+- Files: python/sglang/multimodal_gen/configs/**/*, python/sglang/multimodal_gen/runtime/pipelines/*.py, etc.
+
+---
+id: sglang-instinct-incremental-cookbook-update
+trigger: "When someone needs to fix, clarify, or update details in an existing cookbook doc and/or snippet"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/sglang
+---
+
+# Sglang Instinct Incremental Cookbook Update
+
+## Action
+
+Edit .mdx file under docs_new/cookbook/autoregressive/<Model>/ and edit code snippet in docs_new/src/snippets/autoregressive/<model>-deployment.jsx
+
+## Evidence
+
+- Workflow: incremental-cookbook-docs-snippet-update
+- Files: docs_new/cookbook/autoregressive/*/*.mdx, docs_new/src/snippets/autoregressive/*.jsx
+
